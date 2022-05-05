@@ -1,5 +1,7 @@
 # 👋 Welcome to my proof of work during my 3 months bootcamp from Eazy-Training 👋
 
+*Update : 05/05/2022*
+
 This repository is made to follow my progression through the bootcamp "cursus-devops" from eazy-training. It'll include all of the works I'll make during the next 3 months (May 2022 to July 2022) and beyond. 
 
 This readme is writen in English but I'm French 🇫🇷 so sorry if mistakes are made !
@@ -28,11 +30,6 @@ Get a job working at a full time Linux Cloud System Admin ? Done
 And now, even if I still have a ton of stuff to learn from Linux Systems, I want to dive into DevOps world and the tools that gravitate around.
 
 So, long story short, this is the diary of my journey into DevOps and Linux System Administration with all my work during my bootcamp !
-
-
-# ✨ Welcome to my proof of work during my bootcamp from Eazy-Training ✨ 
-
-*Update : 05/05/2022*
 
 ## ⚡️ Modules
 
