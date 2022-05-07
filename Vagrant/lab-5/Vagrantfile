@@ -1,0 +1,41 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+RAM = 1024
+CPU = 1
+Private_IP_LB = "192.168.56.140"
+Private_IP_WEB1 = "192.168.56.141"
+Private_IP_WEB2 = "192.168.56.142"
+
+Vagrant.configure("2") do |config|
+  #Configure Load-Balancer VM
+  config.vm.define "lb", primary: true do |lb|
+    lb.vm.box = "ubuntu/xenial64"
+    lb.vm.provider "virtualbox" do |v|
+      v.name = "LB"
+      v.cpus = CPU
+      v.memory = RAM
+    lb.vm.network "private_network", ip: Private_IP_LB
+    end
+  end
+  #Configure first web-server VM
+  config.vm.define "web1" do |web1|
+    web1.vm.box = "ubuntu/xenial64"
+    web1.vm.provider "virtualbox" do |v|
+      v.name = "WEB1"
+      v.cpus = CPU
+      v.memory = RAM
+    web1.vm.network "private_network", ip: Private_IP_WEB1
+    end
+  end
+  #Configure second web-server VM
+  config.vm.define "web2" do |web2|
+    web2.vm.box = "ubuntu/xenial64"
+    web2.vm.provider "virtualbox" do |v|
+      v.name = "WEB2"
+      v.cpus = CPU
+      v.memory = RAM
+    web2.vm.network "private_network", ip: Private_IP_WEB2
+    end
+  end
+end
