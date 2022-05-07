@@ -1,0 +1,16 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+RAM = 2048
+CPU = 2
+Private_IP = "192.168.56.150"
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "geerlingguy/centos7"
+  config.vm.network "private_network", ip: Private_IP
+  config.vm.provider "virtualbox" do |v|
+    v.name = "srv-web-centos7"
+    v.cpus = CPU
+    v.memory = RAM
+    end
+  end
