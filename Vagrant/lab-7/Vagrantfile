@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+RAM = 1024
+CPU = 1
+Private_IP_WEBAPP = "192.168.56.140"
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "lucroz94/nginx"
+  config.vm.box_version = "1.0"
+  config.vm.provider "virtualbox" do |v|
+    v.name = "WEBAPP"
+    v.cpus = CPU
+    v.memory = RAM
+  end
+  config.vm.network "private_network", ip: Private_IP_WEBAPP
+  config.vm.synced_folder "static-website-example/", "/usr/share/nginx/html/"
+end
