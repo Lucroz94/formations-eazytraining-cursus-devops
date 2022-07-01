@@ -7,7 +7,7 @@
 Vagrant.configure("2") do |config|
   config.vm.define "ansible" do |ansible|
     ansible.vm.box = "geerlingguy/centos7"
-    ansible.vm.network "private_network", type: "static", ip: "192.168.99.10"
+    ansible.vm.network "private_network", type: "static", ip: "192.168.56.10"
     ansible.vm.hostname = "ansible"
     ansible.vm.provider "virtualbox" do |v|
       v.name = "ansible"
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
     end
     ansible.vm.provision :shell do |shell|
       shell.path = "install_ansible.sh"
-      shell.args = ["master", "192.168.99.10"]
+      shell.args = ["master", "192.168.56.10"]
       shell.env = { 'ENABLE_ZSH' => ENV['ENABLE_ZSH'] }
       
     end
@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
   (1..clients).each do |i|
     config.vm.define "client#{i}" do |client|
       client.vm.box = "geerlingguy/centos7"
-      client.vm.network "private_network", type: "static", ip: "192.168.99.1#{i}"
+      client.vm.network "private_network", type: "static", ip: "192.168.56.1#{i}"
       client.vm.hostname = "client#{i}"
       client.vm.provider "virtualbox" do |v|
         v.name = "client#{i}"
@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
       end
       client.vm.provision :shell do |shell|
         shell.path = "install_ansible.sh"
-        shell.args = ["node", "192.168.99.10"]
+        shell.args = ["node", "192.168.56.10"]
       end
     end
   end
