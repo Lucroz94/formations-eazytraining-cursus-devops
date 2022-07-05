@@ -1,0 +1,12 @@
+all:
+  vars:
+    ansible_user: vagrant
+prod:
+  hosts:
+    client:
+      ansible_host: 192.168.56.11
+    ansible:
+      ansible_host: 192.168.56.10
+  vars:
+    ansible_password: vagrant
+    env: production
