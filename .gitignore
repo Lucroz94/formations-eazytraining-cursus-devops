@@ -2,3 +2,4 @@
 # Scope is all repo folders.
 **/.vagrant/
 **/.terraform/
+**/.terraform.lock.hcl/
