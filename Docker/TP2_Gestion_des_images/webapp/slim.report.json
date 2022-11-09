@@ -1,0 +1,455 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.39.0|f502574b8d8818e86e90d902708d0e32d1acf8f7|2022-10-25_05:05:23AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Kaisen GNU/Linux",
+    "version": "2.1",
+    "display_name": "Kaisen GNU/Linux 2.1 (rolling)"
+  },
+  "type": "build",
+  "state": "error",
+  "target_reference": "lucroz94/ic-webapp:1.0",
+  "system": {
+    "type": "",
+    "release": "",
+    "distro": {
+      "name": "",
+      "version": "",
+      "display_name": ""
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": ""
+    },
+    "size": 0,
+    "size_human": "",
+    "create_time": "",
+    "docker_version": "",
+    "architecture": "",
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 0,
+  "minified_image_size_human": "",
+  "minified_image": "",
+  "minified_image_has_data": false,
+  "minified_by": 0,
+  "artifact_location": "",
+  "container_report_name": "",
+  "seccomp_profile_name": "",
+  "apparmor_profile_name": "",
+  "image_stack": [
+    {
+      "is_top_image": false,
+      "id": "sha256:3a9e80fa460687aa888ebe54540132662b58a3bb1a222c3809fd412d4652eb9c",
+      "full_name": "python:3.6-alpine",
+      "repo_name": "python",
+      "version_tag": "3.6-alpine",
+      "raw_tags": [
+        "python:3.6-alpine"
+      ],
+      "create_time": "2021-11-30T03:56:36Z",
+      "new_size": 40672122,
+      "new_size_human": "41 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2021-11-24T20:19:40Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 5585772,
+          "size_human": "5.6 MB",
+          "params": "file:9233f6f2237d79659a9521f7e390df217cec49f1a8aa3a12147bbca1956acdb9 in /",
+          "command_snippet": "ADD file:9233f6f2237d79659a9521f7e390df217ce...",
+          "command_all": "ADD file:9233f6f2237d79659a9521f7e390df217cec49f1a8aa3a12147bbca1956acdb9 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "CMD",
+          "time": "2021-11-24T20:19:40Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/sh\"]\n",
+          "command_snippet": "CMD [\"/bin/sh\"]\n",
+          "command_all": "CMD [\"/bin/sh\"]\n"
+        },
+        {
+          "type": "ENV",
+          "time": "2021-11-29T20:45:19Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "command_snippet": "ENV PATH=/usr/local/bin:/usr/local/sbin:/usr...",
+          "command_all": "ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        },
+        {
+          "type": "ENV",
+          "time": "2021-11-30T02:41:34Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "LANG=C.UTF-8",
+          "command_snippet": "ENV LANG=C.UTF-8",
+          "command_all": "ENV LANG=C.UTF-8"
+        },
+        {
+          "type": "RUN",
+          "time": "2021-11-30T03:32:02Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 518796,
+          "size_human": "519 kB",
+          "command_snippet": "RUN set -eux; \tapk add --no-cache \t\tca-certi...",
+          "command_all": "RUN set -eux; \tapk add --no-cache \t\tca-certificates \t;",
+          "system_commands": [
+            "set -eux",
+            "apk add --no-cache ca-certificates",
+            ""
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2021-11-30T03:41:19Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D",
+          "command_snippet": "ENV GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6...",
+          "command_all": "ENV GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D"
+        },
+        {
+          "type": "ENV",
+          "time": "2021-11-30T03:49:52Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PYTHON_VERSION=3.6.15",
+          "command_snippet": "ENV PYTHON_VERSION=3.6.15",
+          "command_all": "ENV PYTHON_VERSION=3.6.15"
+        },
+        {
+          "type": "RUN",
+          "time": "2021-11-30T03:56:27Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 26513758,
+          "size_human": "26 MB",
+          "command_snippet": "RUN set -ex && \\\n\tapk add --no-cache --virtu...",
+          "command_all": "RUN set -ex && \\\n\tapk add --no-cache --virtual .fetch-deps \t\tgnupg \t\ttar \t\txz && \\\n\twget -O python.tar.xz \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz\" && \\\n\twget -O python.tar.xz.asc \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc\" && \\\n\texport GNUPGHOME=\"$(mktemp -d)\" && \\\n\tgpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$GPG_KEY\" && \\\n\tgpg --batch --verify python.tar.xz.asc python.tar.xz && \\\n\t{ command -v gpgconf > /dev/null && \\\n\tgpgconf --kill all || :; } && \\\n\trm -rf \"$GNUPGHOME\" python.tar.xz.asc && \\\n\tmkdir -p /usr/src/python && \\\n\ttar -xJC /usr/src/python --strip-components=1 -f python.tar.xz && \\\n\trm python.tar.xz && \\\n\tapk add --no-cache --virtual .build-deps  \t\tbluez-dev \t\tbzip2-dev \t\tcoreutils \t\tdpkg-dev dpkg \t\texpat-dev \t\tfindutils \t\tgcc \t\tgdbm-dev \t\tlibc-dev \t\tlibffi-dev \t\tlibnsl-dev \t\tlibtirpc-dev \t\tlinux-headers \t\tmake \t\tncurses-dev \t\topenssl-dev \t\tpax-utils \t\treadline-dev \t\tsqlite-dev \t\ttcl-dev \t\ttk \t\ttk-dev \t\txz-dev \t\tzlib-dev && \\\n\tapk del --no-network .fetch-deps && \\\n\tcd /usr/src/python && \\\n\tgnuArch=\"$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)\" && \\\n\t./configure \t\t--build=\"$gnuArch\" \t\t--enable-loadable-sqlite-extensions \t\t--enable-optimizations \t\t--enable-option-checking=fatal \t\t--enable-shared \t\t--with-system-expat \t\t--with-system-ffi \t\t--without-ensurepip && \\\n\tmake -j \"$(nproc)\" \t\tEXTRA_CFLAGS=\"-DTHREAD_STACK_SIZE=0x100000\" \t\tLDFLAGS=\"-Wl,--strip-all\" \t\tPROFILE_TASK='-m test.regrtest --pgo \t\t\ttest_array \t\t\ttest_base64 \t\t\ttest_binascii \t\t\ttest_binhex \t\t\ttest_binop \t\t\ttest_bytes \t\t\ttest_c_locale_coercion \t\t\ttest_class \t\t\ttest_cmath \t\t\ttest_codecs \t\t\ttest_compile \t\t\ttest_complex \t\t\ttest_csv \t\t\ttest_decimal \t\t\ttest_dict \t\t\ttest_float \t\t\ttest_fstring \t\t\ttest_hashlib \t\t\ttest_io \t\t\ttest_iter \t\t\ttest_json \t\t\ttest_long \t\t\ttest_math \t\t\ttest_memoryview \t\t\ttest_pickle \t\t\ttest_re \t\t\ttest_set \t\t\ttest_slice \t\t\ttest_struct \t\t\ttest_threading \t\t\ttest_time \t\t\ttest_traceback \t\t\ttest_unicode \t\t' && \\\n\tmake install && \\\n\trm -rf /usr/src/python && \\\n\tfind /usr/local -depth \t\t\\( \t\t\t\\( -type d -a \\( -name test -o -name tests -o -name idle_test \\) \\) \t\t\t-o \\( -type f -a \\( -name '*.pyc' -o -name '*.pyo' -o -name '*.a' \\) \\) \t\t\t-o \\( -type f -a -name 'wininst-*.exe' \\) \t\t\\) -exec rm -rf '{}' + && \\\n\tfind /usr/local -type f -executable -not \\( -name '*tkinter*' \\) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' \t\t| tr ',' '\\n' \t\t| sort -u \t\t| awk 'system(\"[ -e /usr/local/lib/\" $1 \" ]\") == 0 { next } { print \"so:\" $1 }' \t\t| xargs -rt apk add --no-cache --virtual .python-rundeps && \\\n\tapk del --no-network .build-deps && \\\n\tpython3 --version",
+          "system_commands": [
+            "set -ex",
+            "apk add --no-cache --virtual .fetch-deps gnupg tar xz",
+            "wget -O python.tar.xz \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz\"",
+            "wget -O python.tar.xz.asc \"https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc\"",
+            "export GNUPGHOME=\"$(mktemp -d)\"",
+            "gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$GPG_KEY\"",
+            "gpg --batch --verify python.tar.xz.asc python.tar.xz",
+            "{ command -v gpgconf > /dev/null",
+            "gpgconf --kill all || :; }",
+            "rm -rf \"$GNUPGHOME\" python.tar.xz.asc",
+            "mkdir -p /usr/src/python",
+            "tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz",
+            "rm python.tar.xz",
+            "apk add --no-cache --virtual .build-deps  bluez-dev bzip2-dev coreutils dpkg-dev dpkg expat-dev findutils gcc gdbm-dev libc-dev libffi-dev libnsl-dev libtirpc-dev linux-headers make ncurses-dev openssl-dev pax-utils readline-dev sqlite-dev tcl-dev tk tk-dev xz-dev zlib-dev",
+            "apk del --no-network .fetch-deps",
+            "cd /usr/src/python",
+            "gnuArch=\"$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)\"",
+            "./configure --build=\"$gnuArch\" --enable-loadable-sqlite-extensions --enable-optimizations --enable-option-checking=fatal --enable-shared --with-system-expat --with-system-ffi --without-ensurepip",
+            "make -j \"$(nproc)\" EXTRA_CFLAGS=\"-DTHREAD_STACK_SIZE=0x100000\" LDFLAGS=\"-Wl,--strip-all\" PROFILE_TASK='-m test.regrtest --pgo test_array test_base64 test_binascii test_binhex test_binop test_bytes test_c_locale_coercion test_class test_cmath test_codecs test_compile test_complex test_csv test_decimal test_dict test_float test_fstring test_hashlib test_io test_iter test_json test_long test_math test_memoryview test_pickle test_re test_set test_slice test_struct test_threading test_time test_traceback test_unicode '",
+            "make install",
+            "rm -rf /usr/src/python",
+            "find /usr/local -depth ( ( -type d -a ( -name test -o -name tests -o -name idle_test ) ) -o ( -type f -a ( -name '*.pyc' -o -name '*.pyo' -o -name '*.a' ) ) -o ( -type f -a -name 'wininst-*.exe' ) ) -exec rm -rf '{}' +",
+            "find /usr/local -type f -executable -not ( -name '*tkinter*' ) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' | tr ',' 'n' | sort -u | awk 'system(\"[ -e /usr/local/lib/\" $1 \" ]\") == 0 { next } { print \"so:\" $1 }' | xargs -rt apk add --no-cache --virtual .python-rundeps",
+            "apk del --no-network .build-deps",
+            "python3 --version"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2021-11-30T03:56:28Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 32,
+          "size_human": "32 B",
+          "command_snippet": "RUN cd /usr/local/bin && \\\n\tln -s idle3 idle...",
+          "command_all": "RUN cd /usr/local/bin && \\\n\tln -s idle3 idle && \\\n\tln -s pydoc3 pydoc && \\\n\tln -s python3 python && \\\n\tln -s python3-config python-config",
+          "system_commands": [
+            "cd /usr/local/bin",
+            "ln -s idle3 idle",
+            "ln -s pydoc3 pydoc",
+            "ln -s python3 python",
+            "ln -s python3-config python-config"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2021-11-30T03:56:28Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PYTHON_PIP_VERSION=21.2.4",
+          "command_snippet": "ENV PYTHON_PIP_VERSION=21.2.4",
+          "command_all": "ENV PYTHON_PIP_VERSION=21.2.4"
+        },
+        {
+          "type": "ENV",
+          "time": "2021-11-30T03:56:28Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PYTHON_SETUPTOOLS_VERSION=57.5.0",
+          "command_snippet": "ENV PYTHON_SETUPTOOLS_VERSION=57.5.0",
+          "command_all": "ENV PYTHON_SETUPTOOLS_VERSION=57.5.0"
+        },
+        {
+          "type": "ENV",
+          "time": "2021-11-30T03:56:28Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3cb8888cc2869620f57d5d2da64da38f516078c7/public/get-pip.py",
+          "command_snippet": "ENV PYTHON_GET_PIP_URL=https://github.com/py...",
+          "command_all": "ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3cb8888cc2869620f57d5d2da64da38f516078c7/public/get-pip.py"
+        },
+        {
+          "type": "ENV",
+          "time": "2021-11-30T03:56:28Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PYTHON_GET_PIP_SHA256=c518250e91a70d7b20cceb15272209a4ded2a0c263ae5776f129e0d9b5674309",
+          "command_snippet": "ENV PYTHON_GET_PIP_SHA256=c518250e91a70d7b20...",
+          "command_all": "ENV PYTHON_GET_PIP_SHA256=c518250e91a70d7b20cceb15272209a4ded2a0c263ae5776f129e0d9b5674309"
+        },
+        {
+          "type": "RUN",
+          "time": "2021-11-30T03:56:36Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 8053764,
+          "size_human": "8.1 MB",
+          "command_snippet": "RUN set -ex; \t\twget -O get-pip.py \"$PYTHON_G...",
+          "command_all": "RUN set -ex; \t\twget -O get-pip.py \"$PYTHON_GET_PIP_URL\"; \techo \"$PYTHON_GET_PIP_SHA256 *get-pip.py\" | sha256sum -c -; \t\tpython get-pip.py \t\t--disable-pip-version-check \t\t--no-cache-dir \t\t\"pip==$PYTHON_PIP_VERSION\" \t\t\"setuptools==$PYTHON_SETUPTOOLS_VERSION\" \t; \tpip --version; \t\tfind /usr/local -depth \t\t\\( \t\t\t\\( -type d -a \\( -name test -o -name tests -o -name idle_test \\) \\) \t\t\t-o \t\t\t\\( -type f -a \\( -name '*.pyc' -o -name '*.pyo' \\) \\) \t\t\\) -exec rm -rf '{}' +; \trm -f get-pip.py",
+          "system_commands": [
+            "set -ex",
+            "wget -O get-pip.py \"$PYTHON_GET_PIP_URL\"",
+            "echo \"$PYTHON_GET_PIP_SHA256 *get-pip.py\" | sha256sum -c -",
+            "python get-pip.py --disable-pip-version-check --no-cache-dir \"pip==$PYTHON_PIP_VERSION\" \"setuptools==$PYTHON_SETUPTOOLS_VERSION\"",
+            "pip --version",
+            "find /usr/local -depth ( ( -type d -a ( -name test -o -name tests -o -name idle_test ) ) -o ( -type f -a ( -name '*.pyc' -o -name '*.pyo' ) ) ) -exec rm -rf '{}' +",
+            "rm -f get-pip.py"
+          ]
+        },
+        {
+          "type": "CMD",
+          "time": "2021-11-30T03:56:36Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"python3\"]\n",
+          "command_snippet": "CMD [\"python3\"]\n",
+          "command_all": "CMD [\"python3\"]\n",
+          "raw_tags": [
+            "python:3.6-alpine"
+          ]
+        }
+      ]
+    },
+    {
+      "is_top_image": true,
+      "id": "sha256:12dc3d897144ec0741b2391abaf8cf7f3f19fad97cf28d1ef815a89054f3f519",
+      "full_name": "ic-webapp:1.0",
+      "repo_name": "ic-webapp",
+      "version_tag": "1.0",
+      "raw_tags": [
+        "ic-webapp:1.0",
+        "lucroz94/ic-webapp:1.0"
+      ],
+      "create_time": "2022-05-24T16:20:32Z",
+      "new_size": 12008954,
+      "new_size_human": "12 MB",
+      "base_image_id": "sha256:3a9e80fa460687aa888ebe54540132662b58a3bb1a222c3809fd412d4652eb9c",
+      "instructions": [
+        {
+          "type": "LABEL",
+          "time": "2022-05-24T16:20:27Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:2053195efdda7cec7baea88aebd0a3461d211e8e0f03e7ba56d133e3401dafa5",
+          "layer_index": 0,
+          "size": 0,
+          "params": "maintainer=Lucroz94 <lucroz@lucroz.fr>",
+          "command_snippet": "LABEL maintainer=Lucroz94 <lucroz@lucroz.fr>",
+          "command_all": "LABEL maintainer=Lucroz94 <lucroz@lucroz.fr>"
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2022-05-24T16:20:27Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:a9e650c142a0c1a68ed9db0aeddb29e2b7768bd5a40bdb256e210582a3de2ddf",
+          "layer_index": 0,
+          "size": 0,
+          "params": "/opt",
+          "command_snippet": "WORKDIR /opt",
+          "command_all": "WORKDIR /opt",
+          "system_commands": [
+            "mkdir -p /opt"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2022-05-24T16:20:31Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:4d66e5b7e1b05706d3a3bed08ca03f9f0833b6f7d2bb250fe9d354f9e6079143",
+          "layer_index": 0,
+          "size": 11103645,
+          "size_human": "11 MB",
+          "command_snippet": "RUN pip install flask==1.1.2",
+          "command_all": "RUN pip install flask==1.1.2",
+          "system_commands": [
+            "pip install flask==1.1.2"
+          ]
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2022-05-24T16:20:31Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:71a309200a48286b65d5b81d9c8b8a1c63952b25245c818a06dd7f56aae1cb37",
+          "layer_index": 0,
+          "size": 0,
+          "params": "8080",
+          "command_snippet": "EXPOSE 8080",
+          "command_all": "EXPOSE 8080"
+        },
+        {
+          "type": "ENV",
+          "time": "2022-05-24T16:20:32Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:f0e7b37d8b77a75a94e87b67c18a26cd89362c369da3bcb39255bec8a50effac",
+          "layer_index": 0,
+          "size": 0,
+          "params": "ODOO_URL=https://odoo.com",
+          "command_snippet": "ENV ODOO_URL=https://odoo.com",
+          "command_all": "ENV ODOO_URL=https://odoo.com"
+        },
+        {
+          "type": "ENV",
+          "time": "2022-05-24T16:20:32Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:b1c3ba31b7263fe681710be78cbf083acff80280025360cfd82700c2ede7cefa",
+          "layer_index": 0,
+          "size": 0,
+          "params": "PGADMIN_URL=https://pgadmin.org",
+          "command_snippet": "ENV PGADMIN_URL=https://pgadmin.org",
+          "command_all": "ENV PGADMIN_URL=https://pgadmin.org"
+        },
+        {
+          "type": "COPY",
+          "time": "2022-05-24T16:20:32Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:9667a75a25141183ca8863ff254c49d173813bfe559568f650fce68c7906bb2a",
+          "layer_index": 0,
+          "size": 2024,
+          "size_human": "2.0 kB",
+          "params": "file:f7a095cc27da42964501a02843f51d55d4d568131e345d1a7e6a8ae53f819ba7 in ./",
+          "command_snippet": "COPY file:f7a095cc27da42964501a02843f51d55d4...",
+          "command_all": "COPY file:f7a095cc27da42964501a02843f51d55d4d568131e345d1a7e6a8ae53f819ba7 ./",
+          "target": "./",
+          "source_type": "file"
+        },
+        {
+          "type": "COPY",
+          "time": "2022-05-24T16:20:32Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:63337dced055b6f9c8c6c9941bc130e18621cf7184e27800cb30cccf10849ae8",
+          "layer_index": 0,
+          "size": 343399,
+          "size_human": "343 kB",
+          "params": "dir:8163f23a1f2cb2fc3aefb2df21b585d74ce989c3367990a9870c3724ddc29628 in ./images",
+          "command_snippet": "COPY dir:8163f23a1f2cb2fc3aefb2df21b585d74ce...",
+          "command_all": "COPY dir:8163f23a1f2cb2fc3aefb2df21b585d74ce989c3367990a9870c3724ddc29628 ./images",
+          "target": "./images",
+          "source_type": "dir"
+        },
+        {
+          "type": "COPY",
+          "time": "2022-05-24T16:20:32Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:446389813354c734133c2d176ce82e70cdf9dc36ac75c1cacc1dbfb03f75a38f",
+          "layer_index": 0,
+          "size": 3958,
+          "size_human": "4.0 kB",
+          "params": "dir:cf8bff680ba8177962a62e3f72b43d735acd8543a0959cbc7feadfc5bf0d47ed in ./templates",
+          "command_snippet": "COPY dir:cf8bff680ba8177962a62e3f72b43d735ac...",
+          "command_all": "COPY dir:cf8bff680ba8177962a62e3f72b43d735acd8543a0959cbc7feadfc5bf0d47ed ./templates",
+          "target": "./templates",
+          "source_type": "dir"
+        },
+        {
+          "type": "COPY",
+          "time": "2022-05-24T16:20:32Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:47c0180ef777722d936972e52be2c4bfa7540518b881300a2ab77f30fe59e3b3",
+          "layer_index": 0,
+          "size": 555928,
+          "size_human": "556 kB",
+          "params": "dir:a9ce9f05d5097f1662317c1743a409d7f08d1707cc1f479359d76534992765bf in ./static",
+          "command_snippet": "COPY dir:a9ce9f05d5097f1662317c1743a409d7f08...",
+          "command_all": "COPY dir:a9ce9f05d5097f1662317c1743a409d7f08d1707cc1f479359d76534992765bf ./static",
+          "target": "./static",
+          "source_type": "dir"
+        },
+        {
+          "type": "CMD",
+          "time": "2022-05-24T16:20:32Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"python\",\"./app.py\"]\n",
+          "command_snippet": "CMD [\"python\",\"./app.py\"]\n",
+          "command_all": "CMD [\"python\",\"./app.py\"]\n",
+          "raw_tags": [
+            "ic-webapp:1.0",
+            "lucroz94/ic-webapp:1.0"
+          ]
+        }
+      ]
+    }
+  ]
+}
